@@ -43,6 +43,7 @@ jobs:
           git_commit_gpgsign: true
           git_tag_gpgsign: true
 
+      - uses: kora-desktop/ci-actions/retry-notes-push@v1
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
